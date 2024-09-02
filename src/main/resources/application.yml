@@ -1,4 +1,5 @@
 spring:
+  jpa:
     datasource:
       url: jdbc:h2:mem:testdb
     sql:
@@ -7,3 +8,8 @@ spring:
     h2:
       console:
         enable: true
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    defer-datasource-initialization: true
