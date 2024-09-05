@@ -1,7 +1,7 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '3.3.3'
-	id 'io.spring.dependency-management' version '1.1.6'
+	id 'org.springframework.boot' version '3.3.3' // 스프링 부트 버전
+	id 'io.spring.dependency-management' version '1.1.6' // 스프링의 의존성 자동 관리
 }
 
 group = 'bookstudy'
@@ -9,7 +9,7 @@ version = '0.0.1-SNAPSHOT'
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(17)
+		languageVersion = JavaLanguageVersion.of(17) //java 버전 17
 	}
 }
 
@@ -20,10 +20,10 @@ configurations {
 }
 
 repositories {
-	mavenCentral()
+	mavenCentral() // 의존성을 받을 외부 저장소
 }
 
-dependencies {
+dependencies { // 프로젝트 개발 과정 중 필요한 의존성
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
